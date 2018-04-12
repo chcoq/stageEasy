@@ -1,0 +1,30 @@
+AppBundle\Entity\Product:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\ProductRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        enabled:
+            type: boolean
+        name:
+            type: string
+            length: '100'
+        price:
+            type: float
+        image:
+            type: string
+            length: '255'
+        createdAt:
+            type: datetime
+        tags:
+            type: string
+            length: '255'
+        actions:
+            type: string
+            length: '255'
+    lifecycleCallbacks: {  }
