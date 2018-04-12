@@ -1,6 +1,7 @@
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
+
 # Étape 3: Charger les routes de l'ensemble
 easy_admin_bundle:
     resource: "@EasyAdminBundle/Controller/AdminController.php"

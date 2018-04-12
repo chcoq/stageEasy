@@ -67,11 +67,45 @@ swiftmailer:
     spool: { type: memory }
 #Chapitre 2. Votre premier backend
 easy_admin:
+    list:
+        max_results: 30
+    show:
+        max_results: 20
+
     entities:
         Category:
             class: AppBundle\Entity\Category
+            help: 'Bienvenue'
+            label: 'Catégories'
+            list:
+                max_results: 10 # affiche 10 résultat sur la page catégories
+                help: 'Vous êtes sur la page de gestion catérorie'
+                title: 'Liste des catégories'
+                fields: ['title']
+            show:
+                max_results: 10
         User:
             class: AppBundle\Entity\User
+            label: 'Utilisateurs'
+            list:
+                max_results: 10
+                help: 'Vous êtes sur la page de gestion utilisateur'
+                title: 'Liste des utilisateurs'
+#                premiere Facon d'afficher les noms dans les colonnes
+                fields: ['name',{ property: 'email', label: 'Contact',type: 'email' }]
+                search:
+                    fields: ['name', 'user.email']
+
         Product:
             class: AppBundle\Entity\Product
+            label: 'Produits'
+            list:
+                max_results: 10
+                help: 'Vous êtes sur la page de gestion produits'
+                title: 'Liste des produits'
+#                dexieme Facon d'afficher les noms dans les colonnes
+                fields:
+                    - id
+                    - { property: 'price' ,label:'Prix' }
+                    - { property: 'enabled' ,label:'Activation', type:'toggle' } # permet d'afficher un bouton yes /no
     site_name: 'Delice <em style="font-size: 80%;">Frite.</em>'

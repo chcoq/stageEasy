@@ -2,11 +2,11 @@
 
 namespace AppBundle\Controller;
 
+use JavierEguiluz\Bundle\EasyAdminBundle\Controller\AdminController;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 
-class DefaultController extends Controller
+class DefaultController extends AdminController
 {
     /**
      * @Route("/", name="homepage")
