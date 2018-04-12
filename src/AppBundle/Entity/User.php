@@ -20,7 +20,7 @@ class User
     /**
      * @var string
      */
-    private $firstName;
+    private $prenom;
 
     /**
      * @var string
@@ -82,21 +82,21 @@ class User
      *
      * @return string
      */
-    public function getFirstName()
+    public function getPrenom()
     {
-        return $this->firstName;
+        return $this->prenom;
     }
 
     /**
-     * Set firstName.
+     * Set prenom.
      *
-     * @param string $firstName
+     * @param string $prenom
      *
      * @return User
      */
-    public function setFirstName($firstName)
+    public function setPrenom($prenom)
     {
-        $this->firstName = $firstName;
+        $this->prenom = $prenom;
 
         return $this;
     }

@@ -5,7 +5,7 @@ namespace AppBundle\Entity;
 /**
  * Categoty
  */
-class Categoty
+class Category
 {
     /**
      * @var int
@@ -48,7 +48,7 @@ class Categoty
      *
      * @param string $title
      *
-     * @return Categoty
+     * @return Category
      */
     public function setTitle($title)
     {
@@ -72,7 +72,7 @@ class Categoty
      *
      * @param string $description
      *
-     * @return Categoty
+     * @return Category
      */
     public function setDescription($description)
     {
